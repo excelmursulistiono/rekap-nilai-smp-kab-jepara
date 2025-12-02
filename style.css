@@ -1,0 +1,254 @@
+/* Styling Dasar & Variabel Warna Baru */
+:root {
+    /* Warna estetik dan modern */
+    --primary-color: #3B82F6;    /* Biru Cerah/Sky Blue */
+    --secondary-color: #10B981;  /* Hijau Mint (untuk tombol sukses) */
+    --accent-color: #F97316;     /* Oranye (untuk highlight) */
+    --bg-color: #F8FAFC;         /* Lightest Gray Blue untuk latar belakang */
+    --card-bg: #FFFFFF;          /* Putih Bersih */
+    --text-color: #1F2937;       /* Dark Gray (untuk keterbacaan) */
+    --border-color: #E5E7EB;     /* Border halus */
+    /* Shadow lembut untuk efek 'float' */
+    --box-shadow-smooth: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.03);
+    --input-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 30px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* Container utama (Card) */
+.container {
+    background-color: var(--card-bg);
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow-smooth);
+    max-width: 1100px;
+    width: 100%;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Efek halus saat di hover (opsional) */
+.container:hover {
+    transform: translateY(-2px);
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    /* Gradient yang estetik */
+    border-bottom: 3px solid transparent; 
+    border-image: linear-gradient(to right, #3B82F6, #10B981) 1;
+}
+
+header h1 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+header h2 {
+    color: var(--accent-color);
+    margin: 8px 0 0 0;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+.header-content {
+    /* Mengatur logo dan judul sejajar horizontal */
+    display: flex;
+    align-items: center; /* Memastikan logo dan teks berada di tengah vertikal */
+    justify-content: center; /* Memastikan konten berada di tengah header */
+    gap: 15px; /* Jarak antara logo dan teks */
+}
+
+.header-logo {
+    /* Atur ukuran logo */
+    width: 60px;  /* Sesuaikan ukuran logo sesuai keinginan Anda */
+    height: 60px;
+    object-fit: contain; /* Memastikan gambar tidak terdistorsi */
+}
+
+/* Penyesuaian agar teks H1 tidak terpengaruh oleh flex */
+header h1 {
+    /* Hapus margin 0 dari h1 jika ada konflik */
+    margin-bottom: 0; 
+    font-size: 2.5em; /* Pastikan ukuran teks tetap konsisten */
+    text-align: left; /* Teks judul sekarang rata kiri terhadap logo */
+}
+
+header h2 {
+    text-align: left;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 0.95em;
+}
+
+input[type="number"], select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 1em;
+    background-color: #F9FAFB; /* Latar belakang input sedikit abu-abu */
+    box-shadow: var(--input-shadow);
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Ring focus yang lebih modern */
+    outline: none;
+    background-color: var(--card-bg);
+}
+
+/* Sub-heading untuk Nilai */
+h3 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 35px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+/* Grid untuk Input Nilai */
+.grade-input-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px; /* Jarak antar input lebih lega */
+    margin-bottom: 25px;
+}
+
+/* Horizontal Rule (Pembatas) */
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--border-color), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+/* Tombol Submit */
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    /* Gradient untuk tombol yang menarik */
+    background: linear-gradient(90deg, var(--secondary-color) 0%, #34D399 100%); 
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 25px;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 6px 15px rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.submit-btn:disabled {
+    background: #CBD5E1;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Pesan Loading dan Sukses */
+.loading-msg {
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-top: 15px;
+    padding: 10px;
+}
+
+.success-msg {
+    text-align: center;
+    padding: 50px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 15px;
+    background-color: #ECFDF5; 
+    color: var(--secondary-color);
+    margin-top: 25px;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);
+}
+
+.success-msg h2 {
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9em;
+    color: #6B7280;
+}
+
+/* Media Queries untuk Responsif */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grade-input-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .grade-input-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    header h1 {
+        font-size: 1.7em;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
