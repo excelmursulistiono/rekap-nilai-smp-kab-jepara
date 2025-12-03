@@ -23,6 +23,22 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
+    background: linear-gradient(-45deg, #E0F2FE, #D1E9FF, #E9D5FF, #FCE7F6); /* Warna cerah */
+    background-size: 400% 400%; /* Membuat gradien lebih besar dari layar */
+    animation: bg-gradient-shift 5s ease infinite; /* Durasi 20 detik, berulang */
+}
+
+@keyframes bg-gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 2. KEYFRAMES untuk Animasi Tombol Berdenyut */
+@keyframes pulse-shadow {
+    0% { box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3); }
+    50% { box-shadow: 0 6px 15px rgba(16, 185, 129, 0.5); }
+    100% { box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3); }
 }
 
 /* Container utama (Card) */
@@ -35,11 +51,16 @@ body {
     width: 100%;
     margin-top: 20px;
     transition: transform 0.3s ease;
+    border: 3px solid transparent; /* Buat border transparan */
+    transition: all 0.5s ease;
 }
 
 /* Efek halus saat di hover (opsional) */
 .container:hover {
     transform: translateY(-2px);
+    transform: translateY(-4px); /* Efek float yang lebih jelas */
+    /* Membuat border bersinar dengan warna accent */
+    border: 3px solid var(--accent-color);
 }
 
 /* Header Styling */
@@ -168,6 +189,7 @@ hr {
     box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
     transition: all 0.3s ease;
     margin-top: 25px;
+    animation: pulse-shadow 2s infinite ease-in-out;
 }
 
 .submit-btn:hover {
@@ -184,6 +206,11 @@ hr {
     background: #CBD5E1;
     cursor: not-allowed;
     box-shadow: none;
+}
+
+.submit-btn:hover,
+.submit-btn:disabled {
+    animation: none;
 }
 
 /* Pesan Loading dan Sukses */
