@@ -9,118 +9,120 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="header-content">
-                <img src="tutwuri.png" alt="Logo SMP Jepara" class="header-logo">
-                <div>
-                    <h1>REKAP NILAI SMP KABUPATEN JEPARA</h1>
-                    <h2>TAHUN PELAJARAN 2025/2026</h2>
+        <div class="content-wrapper">
+            <header>
+                <div class="header-content">
+                    <img src="tutwuri.png" alt="Logo SMP Jepara" class="header-logo">
+                    <div>
+                        <h1>REKAP NILAI SMP KABUPATEN JEPARA</h1>
+                        <h2>TAHUN PELAJARAN 2025/2026</h2>
+                    </div>
                 </div>
-            </div>
-        </header>
+            </header>
 
-        <form id="nilaiForm" class="data-form">
-            <div class="form-group">
-                <label for="Tes">Tes</label>
-                <select id="Tes" name="Tes" required>
-                    <option value="" disabled selected>Pilih Jenis Tes</option>
-                    <option value="PSTS 1">PSTS 1</option>
-                    <option value="PSAS 1">PSAS 1</option>
-                    <option value="PSTS 2">PSTS 2</option>
-                    <option value="PSAS 2">PSAS 2</option>
-                    <option value="PSAJ">PSAJ</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="Nama_Sekolah">Nama Sekolah</label>
-                <select id="Nama_Sekolah" name="Nama_Sekolah" required>
-                    <option value="" disabled selected>Pilih Sekolah</option>
+            <form id="nilaiForm" class="data-form">
+                <div class="form-group">
+                    <label for="Tes">Tes</label>
+                    <select id="Tes" name="Tes" required>
+                        <option value="" disabled selected>Pilih Jenis Tes</option>
+                        <option value="PSTS 1">PSTS 1</option>
+                        <option value="PSAS 1">PSAS 1</option>
+                        <option value="PSTS 2">PSTS 2</option>
+                        <option value="PSAS 2">PSAS 2</option>
+                        <option value="PSAJ">PSAJ</option>
                     </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Nama_Sekolah">Nama Sekolah</label>
+                    <select id="Nama_Sekolah" name="Nama_Sekolah" required>
+                        <option value="" disabled selected>Pilih Sekolah</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Nilai">Jenis Nilai</label>
+                    <select id="Nilai" name="Nilai" required>
+                        <option value="" disabled selected>Pilih Jenis Nilai</option>
+                        <option value="nilai tertinggi">Nilai Tertinggi</option>
+                        <option value="nilai terendah">Nilai Terendah</option>
+                        <option value="nilai rata-rata">Nilai Rata-rata</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Kelas">Kelas</label>
+                    <select id="Kelas" name="Kelas" required>
+                        <option value="" disabled selected>Pilih Kelas</option>
+                        <option value="Kelas 7">Kelas 7</option>
+                        <option value="Kelas 8">Kelas 8</option>
+                        <option value="Kelas 9">Kelas 9</option>
+                    </select>
+                </div>
+
+                <hr>
+                <h3>Input Nilai Mata Pelajaran</h3>
+
+                <div class="grade-input-grid">
+                    <div class="form-group">
+                        <label for="Bahasa_Indonesia">Bahasa Indonesia</label>
+                        <input type="number" id="Bahasa_Indonesia" name="Bahasa_Indonesia" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Pendidikan_Agama_dan_BP">Pend. Agama & BP</label>
+                        <input type="number" id="Pendidikan_Agama_dan_BP" name="Pendidikan_Agama_dan_BP" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Matematika">Matematika</label>
+                        <input type="number" id="Matematika" name="Matematika" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Pend_Pancasila">Pend. Pancasila</label>
+                        <input type="number" id="Pend_Pancasila" name="Pend_Pancasila" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Bahasa_Inggris">Bahasa Inggris</label>
+                        <input type="number" id="Bahasa_Inggris" name="Bahasa_Inggris" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Seni&Prakarya">Seni & Prakarya</label>
+                        <input type="number" id="Seni&Prakarya" name="Seni&Prakarya" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="IPA">IPA</label>
+                        <input type="number" id="IPA" name="IPA" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Informatika">Informatika</label>
+                        <input type="number" id="Informatika" name="Informatika" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="IPS">IPS</label>
+                        <input type="number" id="IPS" name="IPS" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Bahasa_Jawa">Bahasa Jawa</label>
+                        <input type="number" id="Bahasa_Jawa" name="Bahasa_Jawa" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Penjasorkes">Penjasorkes</label>
+                        <input type="number" id="Penjasorkes" name="Penjasorkes" step="0.01" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="submitButton" class="submit-btn">KIRIM DATA ✅</button>
+                <p id="loadingMessage" class="loading-msg" style="display:none;">Mengirim data...</p>
+            </form>
+
+            <div id="successMessage" class="success-msg" style="display:none;">
+                <h2>DATA BERHASIL DIKIRIM YA! 🎉</h2>
+                <p>Terima kasih atas kontribusinya.</p>
             </div>
 
-            <div class="form-group">
-                <label for="Nilai">Jenis Nilai</label>
-                <select id="Nilai" name="Nilai" required>
-                    <option value="" disabled selected>Pilih Jenis Nilai</option>
-                    <option value="nilai tertinggi">Nilai Tertinggi</option>
-                    <option value="nilai terendah">Nilai Terendah</option>
-                    <option value="nilai rata-rata">Nilai Rata-rata</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="Kelas">Kelas</label>
-                <select id="Kelas" name="Kelas" required>
-                    <option value="" disabled selected>Pilih Kelas</option>
-                    <option value="Kelas 7">Kelas 7</option>
-                    <option value="Kelas 8">Kelas 8</option>
-                    <option value="Kelas 9">Kelas 9</option>
-                </select>
-            </div>
-
-            <hr>
-            <h3>Input Nilai Mata Pelajaran</h3>
-
-            <div class="grade-input-grid">
-                <div class="form-group">
-                    <label for="Bahasa_Indonesia">Bahasa Indonesia</label>
-                    <input type="number" id="Bahasa_Indonesia" name="Bahasa_Indonesia" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="Pendidikan_Agama_dan_BP">Pend. Agama & BP</label>
-                    <input type="number" id="Pendidikan_Agama_dan_BP" name="Pendidikan_Agama_dan_BP" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="Matematika">Matematika</label>
-                    <input type="number" id="Matematika" name="Matematika" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="Pend_Pancasila">Pend. Pancasila</label>
-                    <input type="number" id="Pend_Pancasila" name="Pend_Pancasila" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="Bahasa_Inggris">Bahasa Inggris</label>
-                    <input type="number" id="Bahasa_Inggris" name="Bahasa_Inggris" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="Seni&Prakarya">Seni & Prakarya</label>
-                    <input type="number" id="Seni&Prakarya" name="Seni&Prakarya" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="IPA">IPA</label>
-                    <input type="number" id="IPA" name="IPA" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="Informatika">Informatika</label>
-                    <input type="number" id="Informatika" name="Informatika" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="IPS">IPS</label>
-                    <input type="number" id="IPS" name="IPS" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="Bahasa_Jawa">Bahasa Jawa</label>
-                    <input type="number" id="Bahasa_Jawa" name="Bahasa_Jawa" step="0.01" required>
-                </div>
-                <div class="form-group">
-                    <label for="Penjasorkes">Penjasorkes</label>
-                    <input type="number" id="Penjasorkes" name="Penjasorkes" step="0.01" required>
-                </div>
-            </div>
-
-            <button type="submit" id="submitButton" class="submit-btn">KIRIM DATA ✅</button>
-            <p id="loadingMessage" class="loading-msg" style="display:none;">Mengirim data...</p>
-        </form>
-
-        <div id="successMessage" class="success-msg" style="display:none;">
-            <h2>DATA BERHASIL DIKIRIM YA! 🎉</h2>
-            <p>Terima kasih atas kontribusinya.</p>
+            <footer>
+                <p>Dibuat oleh EM</p>
+            </footer>
         </div>
-
-        <footer>
-            <p>Dibuat oleh EM</p>
-        </footer>
     </div>
     
     <script src="script.js"></script>

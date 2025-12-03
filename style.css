@@ -23,7 +23,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    background: linear-gradient(-45deg, #E0F2FE, #D1E9FF, #E9D5FF, #FCE7F6); /* Warna cerah */
+    background: linear-gradient(-45deg, #d7eefd, #bbdeff, #e3c9ff, #ffd0f2); /* Warna cerah */
     background-size: 400% 400%; /* Membuat gradien lebih besar dari layar */
     animation: bg-gradient-shift 5s ease infinite; /* Durasi 20 detik, berulang */
 }
@@ -43,16 +43,52 @@ body {
 
 /* Container utama (Card) */
 .container {
-    background-color: var(--card-bg);
-    padding: 35px 40px;
-    border-radius: 16px;
-    box-shadow: var(--box-shadow-smooth);
+    /* Hapus background-color dan box-shadow di sini */
+    background: transparent; 
+    box-shadow: none; 
+    
+    padding: 5px; /* Kurangi padding agar border lebih dekat ke tepi */
+    margin-top: 20px;
     max-width: 1100px;
     width: 100%;
-    margin-top: 20px;
+    
+    position: relative; 
+    z-index: 1; /* Biarkan di lapisan bawah */
+    border-radius: 20px; /* Radius lebih besar untuk bingkai */
+    overflow: hidden; /* Penting untuk clipping border */
+    
+    /* Terapkan animasi RGB langsung ke container */
+    background: linear-gradient(
+        45deg, 
+        #ff0000, #ff7300, #fffb00, #48ff00, 
+        #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000
+    );
+    background-size: 400% 400%;
+    animation: border-rgb-walk 10s linear infinite;
     transition: transform 0.3s ease;
-    border: 3px solid transparent; /* Buat border transparan */
-    transition: all 0.5s ease;
+}
+
+/* Animasi untuk Menggerakkan Background Gradient */
+@keyframes border-rgb-walk {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 400% 50%; }
+}
+
+/* Styling untuk Konten di dalam bingkai */
+.content-wrapper {
+    background-color: var(--card-bg); /* Warna putih solid */
+    padding: 30px 35px; /* Padding asli formulir */
+    border-radius: 16px; /* Radius sedikit lebih kecil dari container */
+    position: relative; 
+    z-index: 5; /* Pastikan konten selalu di atas bingkai */
+    height: 100%; 
+    box-shadow: var(--box-shadow-smooth); /* Kembalikan shadow ke konten */
+}
+
+/* Pastikan semua elemen form dan header berada di lapisan atas */
+header, .data-form, footer {
+    position: relative;
+    z-index: 6; 
 }
 
 /* Efek halus saat di hover (opsional) */
